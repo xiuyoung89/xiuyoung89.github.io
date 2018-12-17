@@ -7,17 +7,17 @@
   
   <title>Ubuntu+Hexo+Git个人博客搭建笔记总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  #博客搭建环境 ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里">
+  <meta name="description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里选择是二进制文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu+Hexo+Git个人博客搭建笔记总结">
 <meta property="og:url" content="http://yoursite.com/2018/12/17/Ubuntu+Hexo+Git/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  #博客搭建环境 ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里">
+<meta property="og:description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里选择是二进制文件">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-17T15:08:39.337Z">
+<meta property="og:updated_time" content="2018-12-17T15:15:42.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu+Hexo+Git个人博客搭建笔记总结">
-<meta name="twitter:description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  #博客搭建环境 ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里">
+<meta name="twitter:description" content="明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！  ubuntu环境  Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux   node安装我这里选择是二进制文件">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -89,7 +89,6 @@
         <blockquote>
 <p>明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。<br>这个年代，<br>作为一个技术开发人员，<br>如果连个博客都没有，<br>真的很难交到朋友！</p>
 </blockquote>
-<p>#博客搭建环境</p>
 <h2 id="ubuntu环境"><a href="#ubuntu环境" class="headerlink" title="ubuntu环境"></a>ubuntu环境</h2><blockquote>
 <blockquote>
 <p>Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux</p>
@@ -111,21 +110,16 @@
 <h2 id="Hexo-部署博客到到github上"><a href="#Hexo-部署博客到到github上" class="headerlink" title="Hexo 部署博客到到github上"></a>Hexo 部署博客到到github上</h2><p>首先安装 hexo-deployer-git.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>github上边新建仓库，如：xiuyoung89.github.io<br>修改配置文件 _config.yml 中最后：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:xiuyoung89/xiuyoung89.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<blockquote>
 <p>注：xiuyoung89是github账户名，xiuyoung89.github.io是仓库名</p>
 </blockquote>
-</blockquote>
 <blockquote>
-<p>git-ssh 配置与使用，(参考)[]</p>
-<blockquote>
-<p>hexo clean<br>hexo generate<br>hexo deploy</p>
-</blockquote>
+<p>git-ssh 配置与使用，(参考)<br>hexo clean<br>hexo generate<br>hexo deploy</p>
 </blockquote>
 <h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/17/Ubuntu+Hexo+Git/" data-id="cjpsgftia0000t0jswvfos7qc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/17/Ubuntu+Hexo+Git/" data-id="cjpsgoo620000j0jslfkyu7lf" class="article-share-link">Share</a>
       
       
     </footer>
