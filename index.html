@@ -84,27 +84,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。<br>这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！</p>
+        <h1 id="写在前边的话"><a href="#写在前边的话" class="headerlink" title="写在前边的话"></a>写在前边的话</h1><p>明明可以靠脸吃饭，非要写什么代码，我真的是很羡慕明明。<br>这个年代，作为一个技术开发人员，如果连个博客都没有，真的很难交到朋友！</p>
 <h2 id="ubuntu环境"><a href="#ubuntu环境" class="headerlink" title="ubuntu环境"></a>ubuntu环境</h2><p>Linux wangxy 4.15.0-42-generic #45-Ubuntu SMP Thu Nov 15 19:32:57 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux</p>
 <h2 id="node安装"><a href="#node安装" class="headerlink" title="node安装"></a>node安装</h2><p>我这里选择是二进制文件安装最新版本，<a href="https://nodejs.org/zh-cn/download/current/" target="_blank" rel="noopener">nodejs官网下载</a></p>
 <h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo -g</span><br></pre></td></tr></table></figure>
 <h2 id="hexo使用生成自己的博客"><a href="#hexo使用生成自己的博客" class="headerlink" title="hexo使用生成自己的博客"></a>hexo使用生成自己的博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">makdir myhexo(自己新建的文件夹目录)</span><br><span class="line">hexo init myhexo</span><br><span class="line"><span class="built_in">cd</span> myhexo</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <h2 id="先本地部署一篇博客"><a href="#先本地部署一篇博客" class="headerlink" title="先本地部署一篇博客"></a>先本地部署一篇博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new mynewblog</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>在本地现在可以浏览自己新加的博客，现在是把博客部署到github上边</p>
-<h2 id="Hexo部署博客到到github上"><a href="#Hexo部署博客到到github上" class="headerlink" title="Hexo部署博客到到github上"></a>Hexo部署博客到到github上</h2><p>首先安装 hexo-deployer-git.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>github上边新建仓库，如：xiuyoung89.github.io<br>修改配置文件 _config.yml 中最后：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:xiuyoung89/xiuyoung89.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Hexo部署博客到到github上"><a href="#Hexo部署博客到到github上" class="headerlink" title="Hexo部署博客到到github上"></a>Hexo部署博客到到github上</h2><p>首先安装 hexo-deployer-git.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>github上边新建仓库，如：xiuyoung89.github.io<br>修改配置文件 _config.yml 中最后：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:xiuyoung89/xiuyoung89.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>注：xiuyoung89是github账户名，xiuyoung89.github.io是仓库名</p>
+<p>注：xiuyoung89是github账户名，xiuyoung89.github.io是仓库名<br>git-ssh 配置与使用，(参考)</p>
 </blockquote>
-<blockquote>
-<p>git-ssh 配置与使用，(参考)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <p>完</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/17/Ubuntu+Hexo+Git/" data-id="cjpshdlpz000081jskh9zc9qz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/17/Ubuntu+Hexo+Git/" data-id="cjpshhnpr0000bljsmznxitbz" class="article-share-link">Share</a>
       
       
     </footer>
